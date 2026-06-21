@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="960" height="620" fill="#ffffff"/>
+
+  <!-- Router -->
+  <rect x="330" y="30" width="300" height="64" rx="10" fill="#e8eefc" stroke="#3b62c4" stroke-width="2"/>
+  <text x="480" y="58" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f3a93">Приложение / Shard Router</text>
+  <text x="480" y="80" text-anchor="middle" font-size="13" fill="#3b4a6b">выбор шарда по ключу шардирования</text>
+
+  <!-- Connector lines from router to groups -->
+  <line x1="480" y1="94" x2="480" y2="120" stroke="#8a97b5" stroke-width="2"/>
+  <line x1="160" y1="120" x2="800" y2="120" stroke="#8a97b5" stroke-width="2"/>
+  <line x1="160" y1="120" x2="160" y2="150" stroke="#8a97b5" stroke-width="2"/>
+  <line x1="480" y1="120" x2="480" y2="150" stroke="#8a97b5" stroke-width="2"/>
+  <line x1="800" y1="120" x2="800" y2="150" stroke="#8a97b5" stroke-width="2"/>
+
+  <!-- ===== Vertical shard USERS ===== -->
+  <rect x="30" y="150" width="320" height="420" rx="12" fill="#f4f8ef" stroke="#5a9e3a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="190" y="178" text-anchor="middle" font-size="16" font-weight="bold" fill="#3d7022">Вертикальный шард USERS</text>
+  <text x="190" y="200" text-anchor="middle" font-size="13" fill="#4a6b35">горизонтально разбит на 2 части</text>
+
+  <!-- users_shard_1 -->
+  <rect x="55" y="230" width="125" height="310" rx="10" fill="#ffffff" stroke="#5a9e3a" stroke-width="2"/>
+  <text x="117" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#3d7022">users_shard_1</text>
+  <text x="117" y="280" text-anchor="middle" font-size="12" fill="#666">порт 3310</text>
+  <line x1="65" y1="292" x2="170" y2="292" stroke="#cfe0c2" stroke-width="1"/>
+  <text x="117" y="316" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">id % 2 = 0</text>
+  <text x="117" y="350" text-anchor="middle" font-size="11" fill="#444">id</text>
+  <text x="117" y="370" text-anchor="middle" font-size="11" fill="#444">name</text>
+  <text x="117" y="390" text-anchor="middle" font-size="11" fill="#444">email</text>
+  <text x="117" y="410" text-anchor="middle" font-size="11" fill="#444">city</text>
+  <text x="117" y="510" text-anchor="middle" font-size="11" fill="#888">read / write</text>
+
+  <!-- users_shard_2 -->
+  <rect x="200" y="230" width="125" height="310" rx="10" fill="#ffffff" stroke="#5a9e3a" stroke-width="2"/>
+  <text x="262" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#3d7022">users_shard_2</text>
+  <text x="262" y="280" text-anchor="middle" font-size="12" fill="#666">порт 3313</text>
+  <line x1="210" y1="292" x2="315" y2="292" stroke="#cfe0c2" stroke-width="1"/>
+  <text x="262" y="316" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">id % 2 = 1</text>
+  <text x="262" y="350" text-anchor="middle" font-size="11" fill="#444">id</text>
+  <text x="262" y="370" text-anchor="middle" font-size="11" fill="#444">name</text>
+  <text x="262" y="390" text-anchor="middle" font-size="11" fill="#444">email</text>
+  <text x="262" y="410" text-anchor="middle" font-size="11" fill="#444">city</text>
+  <text x="262" y="510" text-anchor="middle" font-size="11" fill="#888">read / write</text>
+
+  <!-- ===== Vertical shard BOOKS ===== -->
+  <rect x="380" y="150" width="200" height="420" rx="12" fill="#fbf4ec" stroke="#c07d2a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="480" y="178" text-anchor="middle" font-size="16" font-weight="bold" fill="#9a5e15">Вертикальный шард BOOKS</text>
+
+  <rect x="405" y="230" width="150" height="310" rx="10" fill="#ffffff" stroke="#c07d2a" stroke-width="2"/>
+  <text x="480" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#9a5e15">books</text>
+  <text x="480" y="280" text-anchor="middle" font-size="12" fill="#666">порт 3311</text>
+  <line x1="415" y1="292" x2="545" y2="292" stroke="#eed9bf" stroke-width="1"/>
+  <text x="480" y="316" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">вся таблица</text>
+  <text x="480" y="350" text-anchor="middle" font-size="11" fill="#444">id</text>
+  <text x="480" y="370" text-anchor="middle" font-size="11" fill="#444">title</text>
+  <text x="480" y="390" text-anchor="middle" font-size="11" fill="#444">author</text>
+  <text x="480" y="410" text-anchor="middle" font-size="11" fill="#444">store_id</text>
+  <text x="480" y="430" text-anchor="middle" font-size="11" fill="#444">price</text>
+  <text x="480" y="510" text-anchor="middle" font-size="11" fill="#888">read / write</text>
+
+  <!-- ===== Vertical shard STORES ===== -->
+  <rect x="610" y="150" width="320" height="420" rx="12" fill="#eef6f8" stroke="#2a8ca0" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="770" y="178" text-anchor="middle" font-size="16" font-weight="bold" fill="#176777">Вертикальный шард STORES</text>
+  <text x="770" y="200" text-anchor="middle" font-size="13" fill="#2a7585">справочник, горизонтально не делится</text>
+
+  <rect x="685" y="230" width="170" height="310" rx="10" fill="#ffffff" stroke="#2a8ca0" stroke-width="2"/>
+  <text x="770" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#176777">stores</text>
+  <text x="770" y="280" text-anchor="middle" font-size="12" fill="#666">порт 3312</text>
+  <line x1="695" y1="292" x2="845" y2="292" stroke="#cbe5ea" stroke-width="1"/>
+  <text x="770" y="316" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">вся таблица</text>
+  <text x="770" y="350" text-anchor="middle" font-size="11" fill="#444">id</text>
+  <text x="770" y="370" text-anchor="middle" font-size="11" fill="#444">name</text>
+  <text x="770" y="390" text-anchor="middle" font-size="11" fill="#444">city</text>
+  <text x="770" y="510" text-anchor="middle" font-size="11" fill="#888">read / write</text>
+</svg>
